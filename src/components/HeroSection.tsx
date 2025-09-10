@@ -43,7 +43,7 @@ const HeroSection = () => {
               className="group"
               asChild
             >
-              <a href="mailto:yogeshmishra@example.com">
+              <a href="mailto:yogeshmishra4822@gmail.com">
                 <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Email Me
               </a>
@@ -55,7 +55,7 @@ const HeroSection = () => {
               className="group"
               asChild
             >
-              <a href="tel:+1234567890">
+              <a href="tel:+919350758908">
                 <Phone className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Call Me
               </a>
