@@ -1,0 +1,77 @@
+import { Button } from "@/components/ui/button";
+import { Mail, Phone } from "lucide-react";
+
+const HeroSection = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20"></div>
+      
+      {/* Floating 3D elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-secondary/20 rounded-full blur-lg animate-float delay-200"></div>
+        <div className="absolute bottom-32 left-1/3 w-40 h-40 bg-accent/20 rounded-full blur-2xl animate-float delay-400"></div>
+        <div className="absolute bottom-20 right-20 w-28 h-28 bg-primary/30 rounded-full blur-lg animate-float delay-300"></div>
+      </div>
+
+      {/* Hero content */}
+      <div className="container mx-auto px-6 text-center relative z-10">
+        <div className="space-y-8">
+          {/* Name with gradient text */}
+          <div className="space-y-4">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight animate-slide-up">
+              <span className="text-gradient-primary">Yogesh</span>{" "}
+              <span className="text-gradient-accent">Mishra</span>
+            </h1>
+            
+            {/* Subtitle/Tagline */}
+            <p className="text-xl md:text-2xl lg:text-3xl font-light text-muted-foreground animate-slide-up delay-200">
+              <span className="text-gradient-secondary">Full Stack Developer</span>{" "}
+              <span className="text-primary">|</span>{" "}
+              <span className="text-gradient-primary">UI/UX Designer</span>{" "}
+              <span className="text-primary">|</span>{" "}
+              <span className="text-gradient-accent">Data Analytics Enthusiast</span>
+            </p>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up delay-400">
+            <Button 
+              variant="hero" 
+              size="hero"
+              className="group"
+              asChild
+            >
+              <a href="mailto:yogeshmishra@example.com">
+                <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Email Me
+              </a>
+            </Button>
+            
+            <Button 
+              variant="accent" 
+              size="hero"
+              className="group"
+              asChild
+            >
+              <a href="tel:+1234567890">
+                <Phone className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Call Me
+              </a>
+            </Button>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
