@@ -74,8 +74,8 @@ const ProjectsSection = () => {
                     <span className="text-8xl relative z-10">{project.image}</span>
                     
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="glass" size="lg" asChild>
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-20">
+                      <Button variant="glass" size="lg" className="relative z-30" asChild>
                         <a href={project.url} target="_blank" rel="noopener noreferrer">
                           <Eye className="w-5 h-5 mr-2" />
                           View Live
