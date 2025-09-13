@@ -1,6 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Calendar, Building2 } from "lucide-react";
+import hpAiCert from "@/assets/hp-ai-cert.png";
+import hpDataCert from "@/assets/hp-data-cert.png";
+import digitEducatorLogo from "@/assets/digit-educator-logo.png";
 
 const certifications = [
   {
@@ -9,7 +12,7 @@ const certifications = [
     date: "March 2025",
     description: "Gained a basic understanding of the impact of artificial intelligence (AI) on the technological landscape. Learned about key AI concepts and their applications, discovered why data is important to AI, how the technology is being used in businesses, and gained insight into its ethical implications.",
     color: "primary",
-    logo: "🤖"
+    logo: hpAiCert
   },
   {
     title: "Data Science & Analytics",
@@ -17,7 +20,7 @@ const certifications = [
     date: "August 2025",
     description: "Learned about leading data science and analytics practices, methodologies, and tools, examined the benefits and challenges of a data-driven approach for businesses, and gained knowledge about essential skills needed to pursue a career in the field.",
     color: "secondary",
-    logo: "📊"
+    logo: hpDataCert
   },
   {
     title: "Full Stack Web Development",
@@ -25,7 +28,7 @@ const certifications = [
     date: "May 2025",
     description: "Comprehensive hands-on training, projects, and assessments in full stack web development. Demonstrated commitment to learning and acquired essential skills in the subject. The course included modern web technologies and best practices.",
     color: "accent",
-    logo: "💻"
+    logo: digitEducatorLogo
   }
 ];
 
@@ -52,8 +55,8 @@ const CertificationsSection = () => {
               <div className="p-4 sm:p-8 space-y-4 sm:space-y-6">
                 {/* Header */}
                 <div className="text-center space-y-4">
-                  <div className={`w-20 h-20 mx-auto glass rounded-3xl flex items-center justify-center glow-${cert.color} group-hover:scale-110 transition-transform`}>
-                    <span className="text-4xl">{cert.logo}</span>
+                  <div className={`w-20 h-20 mx-auto glass rounded-3xl flex items-center justify-center glow-${cert.color} group-hover:scale-110 transition-transform p-2`}>
+                    <img src={cert.logo} alt={cert.title} className="w-full h-full object-contain" />
                   </div>
                   
                   <div>
