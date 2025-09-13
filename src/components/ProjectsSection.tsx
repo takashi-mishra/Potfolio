@@ -2,37 +2,41 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Eye } from "lucide-react";
+import smartcareHospital from "@/assets/smartcare-hospital.png";
+import uberClone from "@/assets/uber-clone.png";
+import fantaWebsite from "@/assets/fanta-website.png";
+import imageEnhancer from "@/assets/image-enhancer.png";
 
 const projects = [
   {
-    title: "Medical Website",
-    description: "A comprehensive medical website built with modern web technologies. Features responsive design, appointment booking system, and intuitive user interface for healthcare services.",
+    title: "SmartCare Hospital",
+    description: "A comprehensive healthcare website built with modern web technologies. Features responsive design, appointment booking system, emergency care services, and intuitive user interface for medical professionals and patients.",
     url: "https://medical-site-tau.vercel.app/",
-    image: "🏥",
+    image: smartcareHospital,
     tags: ["React", "Healthcare", "Responsive Design", "UI/UX"],
     color: "primary"
   },
   {
     title: "Uber Clone",
-    description: "Full-stack ride-sharing application clone with real-time features. Includes user authentication, ride booking, payment integration, and driver-passenger matching system.",
+    description: "Full-stack ride-sharing application clone with real-time features. Includes user authentication, ride booking, payment integration, and driver-passenger matching system with traffic light navigation interface.",
     url: "https://uber-clone-1-frontend.onrender.com/",
-    image: "🚗",
+    image: uberClone,
     tags: ["MERN Stack", "Real-time", "Payment Gateway", "Geolocation"],
     color: "secondary"
   },
   {
-    title: "Fanta Project",
-    description: "Creative and interactive web project showcasing modern CSS animations and JavaScript functionality. Features smooth transitions and engaging user interactions.",
+    title: "Fanta Landing Page",
+    description: "Creative and vibrant Fanta brand website showcasing modern CSS animations and interactive design. Features stunning orange gradient backgrounds, product showcase, and engaging user interactions.",
     url: "https://fanta-project-six.vercel.app/",
-    image: "🥤",
-    tags: ["CSS Animations", "JavaScript", "Interactive Design", "Creative"],
+    image: fantaWebsite,
+    tags: ["CSS Animations", "JavaScript", "Brand Design", "Interactive"],
     color: "accent"
   },
   {
     title: "AI-Powered Image Enhancer",
-    description: "Advanced image enhancement application using artificial intelligence. Provides automatic image improvement, noise reduction, and quality enhancement features.",
+    description: "Advanced image enhancement application using artificial intelligence. Provides automatic image improvement, before/after comparison, noise reduction, and quality enhancement features with intuitive upload interface.",
     url: "https://ai-powered-image-enhancer-app.vercel.app/",
-    image: "🎨",
+    image: imageEnhancer,
     tags: ["AI/ML", "Image Processing", "React", "API Integration"],
     color: "primary"
   },
@@ -71,7 +75,15 @@ const ProjectsSection = () => {
                 <div className="relative">
                   <div className={`w-full h-48 glass rounded-2xl flex items-center justify-center glow-${project.color} group-hover:scale-105 transition-transform relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
-                    <span className="text-8xl relative z-10">{project.image}</span>
+                    {typeof project.image === 'string' && (project.image.startsWith('🏥') || project.image.startsWith('💬')) ? (
+                      <span className="text-8xl relative z-10">{project.image}</span>
+                    ) : (
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover relative z-10 rounded-xl"
+                      />
+                    )}
                     
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-20">
