@@ -40,21 +40,21 @@ const categories = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 px-6 bg-muted/20">
+    <section id="skills" className="py-12 sm:py-20 px-4 sm:px-6 bg-muted/20">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Skills & <span className="text-gradient-primary">Technologies</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
-          <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto px-4">
             A comprehensive overview of my technical expertise and proficiency levels
           </p>
         </div>
 
         {/* Core Skills Overview */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <Card className="glass-card hover-lift text-center p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
+          <Card className="glass-card hover-lift text-center p-4 sm:p-8">
             <div className="mb-4 flex justify-center">
               <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center glow-primary">
                 <Palette className="w-8 h-8 text-primary" />
@@ -64,34 +64,34 @@ const SkillsSection = () => {
             <p className="text-muted-foreground text-sm">Creating beautiful, user-centric interfaces</p>
           </Card>
 
-          <Card className="glass-card hover-lift text-center p-8">
+          <Card className="glass-card hover-lift text-center p-4 sm:p-8">
             <div className="mb-4 flex justify-center">
               <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center glow-secondary">
                 <Code2 className="w-8 h-8 text-secondary" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-gradient-secondary mb-2">Frontend Development</h3>
-            <p className="text-muted-foreground text-sm">Modern web applications with React</p>
+            <h3 className="text-lg sm:text-xl font-bold text-gradient-secondary mb-2">Frontend Development</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm">Modern web applications with React</p>
           </Card>
 
-          <Card className="glass-card hover-lift text-center p-8">
+          <Card className="glass-card hover-lift text-center p-4 sm:p-8">
             <div className="mb-4 flex justify-center">
               <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center glow-accent">
                 <Server className="w-8 h-8 text-accent" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-gradient-accent mb-2">Backend Development</h3>
-            <p className="text-muted-foreground text-sm">Robust APIs and server architecture</p>
+            <h3 className="text-lg sm:text-xl font-bold text-gradient-accent mb-2">Backend Development</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm">Robust APIs and server architecture</p>
           </Card>
 
-          <Card className="glass-card hover-lift text-center p-8">
+          <Card className="glass-card hover-lift text-center p-4 sm:p-8">
             <div className="mb-4 flex justify-center">
               <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center glow-primary">
                 <BarChart3 className="w-8 h-8 text-primary" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-gradient-primary mb-2">Data Analytics</h3>
-            <p className="text-muted-foreground text-sm">Insights through data visualization</p>
+            <h3 className="text-lg sm:text-xl font-bold text-gradient-primary mb-2">Data Analytics</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm">Insights through data visualization</p>
           </Card>
         </div>
 
@@ -103,7 +103,7 @@ const SkillsSection = () => {
                 <h3 className={`text-2xl font-bold mb-6 text-gradient-${category.color}`}>
                   {category.name}
                 </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   {category.skills.map((skill, skillIndex) => {
                     const Icon = skill.icon;
                     return (

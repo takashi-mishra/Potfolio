@@ -33,23 +33,23 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Let's <span className="text-gradient-primary">Connect</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
-          <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Ready to bring your ideas to life? Let's discuss how we can work together to create something amazing.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
           <Card className="glass-card hover-lift">
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-gradient-secondary mb-6">Send a Message</h3>
+            <div className="p-4 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gradient-secondary mb-4 sm:mb-6">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
@@ -102,10 +102,10 @@ const ContactSection = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-8">
             <Card className="glass-card hover-lift">
-              <div className="p-8 space-y-6">
-                <h3 className="text-2xl font-bold text-gradient-accent mb-6">Get in Touch</h3>
+              <div className="p-4 sm:p-8 space-y-4 sm:space-y-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gradient-accent mb-4 sm:mb-6">Get in Touch</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4 group">
@@ -115,10 +115,10 @@ const ContactSection = () => {
                     <div>
                       <p className="font-semibold">Email</p>
                       <a 
-                        href="mailto:yogeshmishra@example.com" 
+                        href="mailto:yogeshmishra4822@gmail.com" 
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        yogeshmishra@example.com
+                        yogeshmishra4822@gmail.com
                       </a>
                     </div>
                   </div>
@@ -130,10 +130,10 @@ const ContactSection = () => {
                     <div>
                       <p className="font-semibold">Phone</p>
                       <a 
-                        href="tel:+1234567890" 
+                        href="tel:+919350758908" 
                         className="text-muted-foreground hover:text-secondary transition-colors"
                       >
-                        +1 (234) 567-8900
+                        +91 9350758908
                       </a>
                     </div>
                   </div>
@@ -153,10 +153,10 @@ const ContactSection = () => {
 
             {/* Social Links */}
             <Card className="glass-card hover-lift">
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-gradient-primary mb-6">Follow Me</h3>
+              <div className="p-4 sm:p-8">
+                <h3 className="text-lg sm:text-xl font-bold text-gradient-primary mb-4 sm:mb-6">Follow Me</h3>
                 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Button variant="outline" className="group h-16" asChild>
                     <a href="https://github.com/yogesh-mishra" target="_blank" rel="noopener noreferrer">
                       <Github className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" />
@@ -176,7 +176,7 @@ const ContactSection = () => {
 
             {/* Availability Status */}
             <Card className="glass-card hover-lift">
-              <div className="p-8 text-center">
+              <div className="p-4 sm:p-8 text-center">
                 <div className="flex items-center justify-center space-x-2 mb-4">
                   <div className="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
                   <span className="text-secondary font-semibold">Available for Projects</span>

@@ -2,20 +2,20 @@ import { Card } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             About <span className="text-gradient-primary">Me</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start order-2 lg:order-1">
             <div className="relative">
-              <div className="w-80 h-80 glass-card rounded-full p-4 animate-pulse-glow">
+              <div className="w-64 sm:w-80 h-64 sm:h-80 glass-card rounded-full p-4 animate-pulse-glow">
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
                   <div className="text-8xl font-bold text-gradient-primary">YM</div>
                 </div>
@@ -27,7 +27,7 @@ const AboutSection = () => {
           </div>
 
           {/* About Content */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
             <Card className="glass-card hover-lift">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-gradient-secondary">Background</h3>
@@ -62,7 +62,7 @@ const AboutSection = () => {
             <Card className="glass-card hover-lift">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-gradient-primary">Focus Areas</h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="text-center p-4 glass rounded-xl border border-primary/20">
                     <div className="text-2xl mb-2">🎨</div>
                     <div className="font-semibold">UI/UX Design</div>

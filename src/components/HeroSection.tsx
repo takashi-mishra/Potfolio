@@ -16,27 +16,29 @@ const HeroSection = () => {
       </div>
 
       {/* Hero content */}
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="space-y-8">
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div className="space-y-6 sm:space-y-8">
           {/* Name with gradient text */}
-          <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight animate-slide-up">
+          <div className="space-y-2 sm:space-y-4">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tight animate-slide-up leading-tight">
               <span className="text-gradient-primary">Yogesh</span>{" "}
               <span className="text-gradient-accent">Mishra</span>
             </h1>
             
             {/* Subtitle/Tagline */}
-            <p className="text-xl md:text-2xl lg:text-3xl font-light text-muted-foreground animate-slide-up delay-200">
-              <span className="text-gradient-secondary">Full Stack Developer</span>{" "}
-              <span className="text-primary">|</span>{" "}
-              <span className="text-gradient-primary">UI/UX Designer</span>{" "}
-              <span className="text-primary">|</span>{" "}
+            <p className="text-sm sm:text-lg md:text-2xl lg:text-3xl font-light text-muted-foreground animate-slide-up delay-200 leading-relaxed px-2">
+              <span className="text-gradient-secondary">Full Stack Developer</span>
+              <span className="hidden sm:inline"> <span className="text-primary">|</span> </span>
+              <br className="sm:hidden" />
+              <span className="text-gradient-primary">UI/UX Designer</span>
+              <span className="hidden sm:inline"> <span className="text-primary">|</span> </span>
+              <br className="sm:hidden" />
               <span className="text-gradient-accent">Data Analytics Enthusiast</span>
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-slide-up delay-400 px-4">
             <Button 
               variant="hero" 
               size="hero"

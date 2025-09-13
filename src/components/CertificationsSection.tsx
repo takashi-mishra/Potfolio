@@ -31,25 +31,25 @@ const certifications = [
 
 const CertificationsSection = () => {
   return (
-    <section id="certifications" className="py-20 px-6">
+    <section id="certifications" className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             <span className="text-gradient-primary">Certifications</span> & Achievements
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
-          <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Continuous learning and professional development through recognized courses and certifications
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {certifications.map((cert, index) => (
             <Card 
               key={cert.title} 
               className={`glass-card hover-lift group cursor-pointer animate-slide-up delay-${index * 100}`}
             >
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-8 space-y-4 sm:space-y-6">
                 {/* Header */}
                 <div className="text-center space-y-4">
                   <div className={`w-20 h-20 mx-auto glass rounded-3xl flex items-center justify-center glow-${cert.color} group-hover:scale-110 transition-transform`}>
@@ -92,18 +92,18 @@ const CertificationsSection = () => {
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <Card className="glass-card text-center p-8 hover-lift">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
+          <Card className="glass-card text-center p-4 sm:p-8 hover-lift">
             <div className="text-4xl font-bold text-gradient-primary mb-2">3</div>
             <div className="text-muted-foreground">Certifications Earned</div>
           </Card>
           
-          <Card className="glass-card text-center p-8 hover-lift">
+          <Card className="glass-card text-center p-4 sm:p-8 hover-lift">
             <div className="text-4xl font-bold text-gradient-secondary mb-2">200+</div>
             <div className="text-muted-foreground">Hours of Learning</div>
           </Card>
           
-          <Card className="glass-card text-center p-8 hover-lift">
+          <Card className="glass-card text-center p-4 sm:p-8 hover-lift">
             <div className="text-4xl font-bold text-gradient-accent mb-2">2025</div>
             <div className="text-muted-foreground">Year of Achievement</div>
           </Card>
