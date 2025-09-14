@@ -2,8 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Calendar, Building2 } from "lucide-react";
 import hpAiCert from "@/assets/hp-ai-cert.png";
-import hpDataCert from "@/assets/hp-data-cert.png";
-import digitEducatorLogo from "@/assets/digit-educator-logo.png";
+import hpDataCert from "@/assets/hp-data-science-cert.png";
+import digitEducatorCert from "@/assets/digit-educator-cert.png";
 
 const certifications = [
   {
@@ -28,7 +28,7 @@ const certifications = [
     date: "May 2025",
     description: "Comprehensive hands-on training, projects, and assessments in full stack web development. Demonstrated commitment to learning and acquired essential skills in the subject. The course included modern web technologies and best practices.",
     color: "accent",
-    logo: digitEducatorLogo
+    logo: digitEducatorCert
   }
 ];
 
@@ -55,8 +55,8 @@ const CertificationsSection = () => {
               <div className="p-4 sm:p-8 space-y-4 sm:space-y-6">
                 {/* Header */}
                 <div className="text-center space-y-4">
-                  <div className={`w-20 h-20 mx-auto glass rounded-3xl flex items-center justify-center glow-${cert.color} group-hover:scale-110 transition-transform p-2`}>
-                    <img src={cert.logo} alt={cert.title} className="w-full h-full object-contain" />
+                  <div className={`w-32 h-24 mx-auto glass rounded-2xl flex items-center justify-center glow-${cert.color} group-hover:scale-105 transition-transform p-3 bg-white/90 dark:bg-gray-900/90`}>
+                    <img src={cert.logo} alt={cert.title} className="w-full h-full object-contain rounded-lg" />
                   </div>
                   
                   <div>
