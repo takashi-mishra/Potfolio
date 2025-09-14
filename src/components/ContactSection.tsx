@@ -22,7 +22,7 @@ const ContactSection = () => {
     try {
       await emailjs.send(
         'service_1mkeb6k',
-        'template_xyz123', // You'll need to create a template in EmailJS
+        'template_REPLACE_WITH_YOUR_TEMPLATE_ID', // Replace with your actual template ID from EmailJS dashboard
         {
           from_name: formData.name,
           from_email: formData.email,
