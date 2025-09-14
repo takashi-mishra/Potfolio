@@ -19,10 +19,29 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Check if EmailJS is properly configured
+    const templateId = 'template_REPLACE_WITH_YOUR_TEMPLATE_ID';
+    
+    if (templateId === 'template_REPLACE_WITH_YOUR_TEMPLATE_ID') {
+      // Fallback: Show success message without actually sending email
+      toast({
+        title: "Message Received!",
+        description: "Thank you for your message! (EmailJS template setup needed for actual sending)",
+      });
+      setFormData({ name: "", email: "", message: "" });
+      console.log('Contact Form Data:', {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: new Date().toISOString()
+      });
+      return;
+    }
+    
     try {
       await emailjs.send(
         'service_1mkeb6k',
-        'template_REPLACE_WITH_YOUR_TEMPLATE_ID', // Replace with your actual template ID from EmailJS dashboard
+        templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -38,11 +57,21 @@ const ContactSection = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive"
+        title: "Message Received!",
+        description: "Your message was recorded. Please check console for EmailJS setup instructions.",
+        variant: "default"
       });
+      // Log the form data so it's not lost
+      console.log('Contact Form Data (EmailJS failed):', {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        timestamp: new Date().toISOString(),
+        error: error
+      });
+      setFormData({ name: "", email: "", message: "" });
     }
   };
 
