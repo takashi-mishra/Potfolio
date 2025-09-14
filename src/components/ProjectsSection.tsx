@@ -6,6 +6,7 @@ import smartcareHospital from "@/assets/smartcare-hospital.png";
 import uberClone from "@/assets/uber-clone.png";
 import fantaWebsite from "@/assets/fanta-website.png";
 import imageEnhancer from "@/assets/image-enhancer.png";
+import aiChatbot from "@/assets/ai-chatbot.png";
 
 const projects = [
   {
@@ -44,7 +45,7 @@ const projects = [
     title: "AI Chatbox",
     description: "Intelligent chatbot application with natural language processing capabilities. Features conversational AI, user-friendly interface, and seamless communication flow.",
     url: "https://takashi-mishra.github.io/Chatbox",
-    image: "💬",
+    image: aiChatbot,
     tags: ["AI/ML", "NLP", "Chat Interface", "JavaScript"],
     color: "secondary"
   }
@@ -135,9 +136,11 @@ const ProjectsSection = () => {
                       </a>
                     </Button>
                     
-                    <Button variant="outline" size="sm" className="group/btn">
-                      <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                      Source
+                    <Button variant="outline" size="sm" className="group/btn" asChild>
+                      <a href="https://github.com/takashi-mishra" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                        Source
+                      </a>
                     </Button>
                   </div>
                 </div>
