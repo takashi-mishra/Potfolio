@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden w-full">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20"></div>
       
@@ -16,7 +16,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero content */}
-      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 w-full max-w-6xl">
         <div className="space-y-6 sm:space-y-8">
           {/* Name with gradient text */}
           <div className="space-y-2 sm:space-y-4">

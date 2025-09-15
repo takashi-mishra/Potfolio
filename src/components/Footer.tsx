@@ -7,15 +7,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 px-6 bg-muted/30">
+    <footer className="relative py-12 sm:py-16 px-4 sm:px-6 bg-muted/30 w-full overflow-x-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+      <div className="container mx-auto max-w-6xl relative z-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Branding */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
@@ -84,10 +84,10 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="flex items-center space-x-2 text-muted-foreground">
-            <span>© 2025 Yogesh Mishra. All Rights Reserved.</span>
-            <span>•</span>
-            <span className="flex items-center space-x-1">
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 text-muted-foreground text-center md:text-left">
+            <span className="text-sm">© 2025 Yogesh Mishra. All Rights Reserved.</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="flex items-center space-x-1 text-sm">
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
               <span>and lots of coffee</span>

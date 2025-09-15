@@ -53,25 +53,25 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 px-6 bg-muted/20">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+    <section id="projects" className="py-12 sm:py-20 px-4 sm:px-6 bg-muted/20 w-full overflow-x-hidden">
+      <div className="container mx-auto max-w-7xl w-full">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Featured <span className="text-gradient-primary">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
-          <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto px-4">
             A showcase of my latest work demonstrating technical skills, creativity, and problem-solving abilities
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 w-full">
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className={`glass-card hover-lift group animate-slide-up delay-${index * 100} overflow-hidden`}
+              className={`w-full glass-card hover-lift group animate-slide-up delay-${index * 100} overflow-hidden`}
             >
-              <div className="p-8 space-y-6">
+              <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 w-full">
                 {/* Project Image/Icon */}
                 <div className="relative">
                   <div className={`w-full h-48 glass rounded-2xl flex items-center justify-center glow-${project.color} group-hover:scale-105 transition-transform relative overflow-hidden`}>
@@ -150,12 +150,12 @@ const ProjectsSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="glass-card hover-lift p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gradient-primary mb-4">
+        <div className="text-center mt-12 sm:mt-16 w-full">
+          <Card className="glass-card hover-lift p-4 sm:p-6 md:p-8 max-w-2xl mx-auto w-full">
+            <h3 className="text-xl sm:text-2xl font-bold text-gradient-primary mb-4">
               Interested in collaborating?
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <Button variant="hero" size="lg" asChild>

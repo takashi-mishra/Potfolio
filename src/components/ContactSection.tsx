@@ -83,8 +83,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 w-full overflow-x-hidden">
+      <div className="container mx-auto max-w-6xl w-full">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Let's <span className="text-gradient-primary">Connect</span>
@@ -95,13 +95,14 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 w-full">
           {/* Contact Form */}
-          <Card className="glass-card hover-lift">
-            <div className="p-4 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-gradient-secondary mb-4 sm:mb-6">Send a Message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="w-full max-w-lg mx-auto lg:max-w-none">
+            <Card className="glass-card hover-lift w-full">
+              <div className="p-4 sm:p-6 lg:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-gradient-secondary mb-4 sm:mb-6">Send a Message</h3>
+                
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-foreground">Name</Label>
                   <Input
@@ -148,13 +149,14 @@ const ContactSection = () => {
                   Send Message
                 </Button>
               </form>
-            </div>
-          </Card>
+              </div>
+            </Card>
+          </div>
 
           {/* Contact Information */}
-          <div className="space-y-4 sm:space-y-8">
-            <Card className="glass-card hover-lift">
-              <div className="p-4 sm:p-8 space-y-4 sm:space-y-6">
+          <div className="space-y-4 sm:space-y-6 w-full">
+            <Card className="glass-card hover-lift w-full">
+              <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-gradient-accent mb-4 sm:mb-6">Get in Touch</h3>
                 
                 <div className="space-y-4">
@@ -202,8 +204,8 @@ const ContactSection = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="glass-card hover-lift">
-              <div className="p-4 sm:p-8">
+            <Card className="glass-card hover-lift w-full">
+              <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-gradient-primary mb-4 sm:mb-6">Follow Me</h3>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -225,8 +227,8 @@ const ContactSection = () => {
             </Card>
 
             {/* Availability Status */}
-            <Card className="glass-card hover-lift">
-              <div className="p-4 sm:p-8 text-center">
+            <Card className="glass-card hover-lift w-full">
+              <div className="p-4 sm:p-6 text-center">
                 <div className="flex items-center justify-center space-x-2 mb-4">
                   <div className="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
                   <span className="text-secondary font-semibold">Available for Projects</span>

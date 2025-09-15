@@ -2,8 +2,8 @@ import { Card } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 sm:py-20 px-4 sm:px-6">
-      <div className="container mx-auto max-w-6xl">
+    <section id="about" className="py-12 sm:py-20 px-4 sm:px-6 w-full overflow-x-hidden">
+      <div className="container mx-auto max-w-6xl w-full">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             About <span className="text-gradient-primary">Me</span>
@@ -11,7 +11,7 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center w-full">
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-start order-2 lg:order-1">
             <div className="relative">
