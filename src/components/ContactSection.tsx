@@ -7,28 +7,31 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, Github, Linkedin, Send, MapPin } from "lucide-react";
 import emailjs from '@emailjs/browser';
-
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Check if EmailJS is properly configured
     const templateId = 'template_REPLACE_WITH_YOUR_TEMPLATE_ID';
-    
     if (templateId === 'template_REPLACE_WITH_YOUR_TEMPLATE_ID') {
       // Fallback: Show success message without actually sending email
       toast({
         title: "Message Received!",
-        description: "Thank you for your message! (EmailJS template setup needed for actual sending)",
+        description: "Thank you for your message! (EmailJS template setup needed for actual sending)"
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
       console.log('Contact Form Data:', {
         name: formData.name,
         email: formData.email,
@@ -37,25 +40,22 @@ const ContactSection = () => {
       });
       return;
     }
-    
     try {
-      await emailjs.send(
-        'service_1mkeb6k',
-        templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: 'Yogesh Mishra',
-        },
-        'SLKQbbCfrhpba7CL7'
-      );
-      
+      await emailjs.send('service_1mkeb6k', templateId, {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Yogesh Mishra'
+      }, 'SLKQbbCfrhpba7CL7');
       toast({
         title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+        description: "Thank you for your message. I'll get back to you soon!"
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
     } catch (error) {
       console.error('EmailJS Error:', error);
       toast({
@@ -71,19 +71,20 @@ const ContactSection = () => {
         timestamp: new Date().toISOString(),
         error: error
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
     }
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 w-full overflow-x-hidden">
+  return <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 w-full overflow-x-hidden">
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1400px] mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
@@ -105,43 +106,17 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-foreground">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your full name"
-                    required
-                    className="glass border-white/20 focus:border-primary/50 focus:glow-primary"
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your full name" required className="glass border-white/20 focus:border-primary/50 focus:glow-primary" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-foreground">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your.email@example.com"
-                    required
-                    className="glass border-white/20 focus:border-primary/50 focus:glow-primary"
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your.email@example.com" required className="glass border-white/20 focus:border-primary/50 focus:glow-primary" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-foreground">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell me about your project or just say hello!"
-                    rows={6}
-                    required
-                    className="glass border-white/20 focus:border-primary/50 focus:glow-primary resize-none"
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell me about your project or just say hello!" rows={6} required className="glass border-white/20 focus:border-primary/50 focus:glow-primary resize-none" />
                 </div>
 
                 <Button type="submit" variant="hero" size="lg" className="w-full group">
@@ -166,12 +141,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-semibold">Email</p>
-                      <a 
-                        href="mailto:yogeshmishra4822@gmail.com" 
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        yogeshmishra4822@gmail.com
-                      </a>
+                      <a href="mailto:yogeshmishra4822@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">yogeshmishra4822@gmail.com</a>
                     </div>
                   </div>
 
@@ -181,10 +151,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <a 
-                        href="tel:+919350758908" 
-                        className="text-muted-foreground hover:text-secondary transition-colors"
-                      >
+                      <a href="tel:+919350758908" className="text-muted-foreground hover:text-secondary transition-colors">
                         +91 9350758908
                       </a>
                     </div>
@@ -241,8 +208,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
