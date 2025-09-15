@@ -123,7 +123,7 @@ const ProjectsSection = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-4 pt-4">
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <Button 
                       variant={project.color === 'primary' ? 'default' : project.color === 'secondary' ? 'secondary' : 'accent'} 
                       size="sm" 
