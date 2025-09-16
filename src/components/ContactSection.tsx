@@ -177,14 +177,14 @@ const ContactSection = () => {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Button variant="outline" className="group h-16" asChild>
-                    <a href="https://github.com/yogesh-mishra" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/takashi-mishra" target="_blank" rel="noopener noreferrer">
                       <Github className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" />
                       GitHub
                     </a>
                   </Button>
                   
                   <Button variant="outline" className="group h-16" asChild>
-                    <a href="https://linkedin.com/in/yogesh-mishra" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/yogesh-kumar-mishra-b380a7337" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" />
                       LinkedIn
                     </a>
