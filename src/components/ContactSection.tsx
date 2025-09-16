@@ -139,9 +139,9 @@ const ContactSection = () => {
                     <div className="w-12 h-12 glass rounded-2xl flex items-center justify-center glow-primary group-hover:scale-110 transition-transform">
                       <Mail className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="flex-1 min-w-0">
                       <p className="font-semibold">Email</p>
-                      <a href="mailto:yogeshmishra4822@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">yogeshmishra4822@gmail.com</a>
+                      <a href="mailto:yogeshmishra4822@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all text-sm sm:text-base">yogeshmishra4822@gmail.com</a>
                     </div>
                   </div>
 
