@@ -85,7 +85,7 @@ const ContactSection = () => {
     });
   };
   return <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 w-full overflow-x-hidden">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1400px] mx-auto">
+      <div className="w-full max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Let's <span className="text-gradient-primary">Connect</span>
@@ -96,9 +96,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 w-full">
           {/* Contact Form */}
-          <div className="lg:col-span-2 w-full">
+          <div className="lg:col-span-5 w-full">
             <Card className="glass-card hover-lift w-full">
               <div className="p-4 sm:p-6 lg:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-gradient-secondary mb-4 sm:mb-6">Send a Message</h3>
@@ -129,7 +129,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="lg:col-span-3 space-y-4 sm:space-y-6 w-full">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-6 w-full">
             <Card className="glass-card hover-lift w-full">
               <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 <h3 className="text-xl sm:text-2xl font-bold text-gradient-accent mb-4 sm:mb-6">Get in Touch</h3>

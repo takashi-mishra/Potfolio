@@ -54,7 +54,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <section id="projects" className="py-12 sm:py-20 px-4 sm:px-6 bg-muted/20 w-full overflow-x-hidden">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1400px] mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Featured <span className="text-gradient-primary">Projects</span>
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
